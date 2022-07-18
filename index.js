@@ -7,7 +7,8 @@ const {
 } = require('mongodb');
 
 const cors = require('cors');
-// const { ObjectID } = require('bson');
+// const{ ObjectID } = require('BSON');
+
 
 const app = express();
 app.use(express.json());
@@ -82,7 +83,7 @@ app.delete('/users/:id', (req, res) => {
   });
 });
 
-app.put("/user/:id", (req, res) => {
+app.put("/users/:id", (req, res) => {
   const id = req.params.id
   client.connect(async function (err, client) {
     if (err) {
